@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.gallery-grid {
+	display: grid;
+	gap: 1.5rem;
+	font-family: 'Roboto', sans-serif;
+	padding-block: 2rem;
+	margin-inline: auto;
+	width: min(95%, 70rem);
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: fit-content(40%);
+}
+
+.grid-col-span-4 {
+	grid-column: span 4;
+}
+.grid-col-span-2 {
+	grid-column: span 2;
+}
+.photo {
+	position: relative;
+}
+
+.photo > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: brightness(60%);
+	border-radius: 0.5rem;
+}
+.text-container {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+}
+
+.title-big {
+	font-size: 2.2em;
+}
+.title-small {
+	font-size: 1em;
+	letter-spacing: 1.5px;
+}
+
+.overlay {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	opacity: 0;
+	transition: 0.5s ease;
+}
+
+.photo:nth-child(2):hover .text-container {
+	display: none;
+}
+.photo:nth-child(2):hover .overlay {
+	opacity: 1;
+}

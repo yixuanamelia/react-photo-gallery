@@ -45,15 +45,15 @@ const Gallery = () => {
 					<div className='title-big'>
 						<span>VENICE</span>
 					</div>
-					<div className='description'>
+					<div className='description' style={{ marginTop: '30px' }}>
 						<p>
 							Venice, the capital of northern Italy's Veneto region, is built on
 							more than 100 small islands in a lagoon in the Adriatic Sea. It
 							has no roads, just canals.
 						</p>
 					</div>
-					<div className='explore-button'>
-						<button>Explore More</button>
+					<div>
+						<button className='explore-button'>Explore More</button>
 					</div>
 				</div>
 			</div>
